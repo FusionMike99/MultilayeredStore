@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StoreBLL</name>
+    </assembly>
+    <members>
+        <member name="T:StoreBLL.DTO.OrderStatusDto">
+            <summary>
+            Represent data transform object of enumuration for order's statuses
+            </summary>
+        </member>
+        <member name="F:StoreBLL.DTO.OrderStatusDto.New">
+            <summary>
+            Represent order's status - New
+            </summary>
+        </member>
+        <member name="F:StoreBLL.DTO.OrderStatusDto.PaymentReceived">
+            <summary>
+            Represent order's status - Payment received
+            </summary>
+        </member>
+        <member name="F:StoreBLL.DTO.OrderStatusDto.Sent">
+            <summary>
+            Represent order's status - Sent
+            </summary>
+        </member>
+        <member name="F:StoreBLL.DTO.OrderStatusDto.Received">
+            <summary>
+            Represent order's status - Received
+            </summary>
+        </member>
+        <member name="F:StoreBLL.DTO.OrderStatusDto.Completed">
+            <summary>
+            Represent order's status - Completed
+            </summary>
+        </member>
+        <member name="F:StoreBLL.DTO.OrderStatusDto.CanceledByAdmin">
+            <summary>
+            Represent order's status - Canceled by admin
+            </summary>
+        </member>
+        <member name="F:StoreBLL.DTO.OrderStatusDto.CanceledByUser">
+            <summary>
+            Represent order's status - Canceled by user
+            </summary>
+        </member>
+        <member name="T:StoreBLL.DTO.OrderDto">
+            <summary>
+            Represent data transform object - Order
+            </summary>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderDto.ID">
+            <value>
+            The <c>ID</c> property represents id
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderDto.ID"/> is a
+            that you use for id.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderDto.OrderItems">
+            <value>
+            The <c>OrderItems</c> property represents items of order
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderDto.OrderItems"/> is a
+            that you use for items of order.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderDto.DateOfOpening">
+            <value>
+            The <c>DateOfOpening</c> property represents date of opening order
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderDto.DateOfOpening"/> is a
+            that you use for date of opening order.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderDto.Total">
+            <value>
+            The <c>Total</c> property represents total sum
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderDto.Total"/> is a
+            that you use for total sum.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderDto.User">
+            <value>
+            The <c>User</c> property represents user
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderDto.User"/> is a
+            that you use for user.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderDto.OrderStatus">
+            <value>
+            The <c>OrderStatus</c> property represents order's status
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderDto.OrderStatus"/> is a
+            that you use for order's status.
+            </remarks>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderDto.#ctor">
+            <summary>
+            Empty constructor for mapping
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderDto.#ctor(System.Collections.Generic.IEnumerable{StoreBLL.DTO.OrderItemDto},StoreBLL.DTO.UserDto)">
+            <summary>
+            Initialize <see cref="P:StoreBLL.DTO.OrderDto.OrderItems"/>, <see cref="P:StoreBLL.DTO.OrderDto.User"/>, <see cref="P:StoreBLL.DTO.OrderDto.DateOfOpening"/>,
+            <see cref="P:StoreBLL.DTO.OrderDto.OrderStatus"/>
+            </summary>
+            <param name="orderItems">Collection of order's items</param>
+            <param name="user">User</param>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderDto.#ctor(System.String,System.Collections.Generic.IEnumerable{StoreBLL.DTO.OrderItemDto},StoreBLL.DTO.UserDto)">
+            <summary>
+            Initialize <see cref="P:StoreBLL.DTO.OrderDto.ID"/>, <see cref="P:StoreBLL.DTO.OrderDto.OrderItems"/>, <see cref="P:StoreBLL.DTO.OrderDto.User"/>, <see cref="P:StoreBLL.DTO.OrderDto.DateOfOpening"/>,
+            <see cref="P:StoreBLL.DTO.OrderDto.OrderStatus"/>
+            </summary>
+            <param name="id">Order's ID</param>
+            <param name="orderItems">Collection of order's items</param>
+            <param name="user">User</param>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderDto.Equals(System.Object)">
+            <summary>
+            This method using for comparison
+            </summary>
+            <param name="obj">The object to compare</param>
+            <returns>Returns boolean</returns>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderDto.GetHashCode">
+            <summary>
+            This method calculate hash code
+            </summary>
+            <returns>Returns integer</returns>
+        </member>
+        <member name="T:StoreBLL.DTO.OrderItemDto">
+            <summary>
+            Represent data transform object - OrderItem
+            </summary>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderItemDto.Product">
+            <value>
+            The <c>Product</c> property represents product
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderItemDto.Product"/> is a
+            that you use for product.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderItemDto.Amount">
+            <value>
+            The <c>Amount</c> property represents amount
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderItemDto.Amount"/> is a
+            that you use for amount.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.OrderItemDto.Cost">
+            <value>
+            The <c>Cost</c> property represents cost
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.OrderItemDto.Cost"/> is a
+            that you use for cost.
+            </remarks>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderItemDto.#ctor">
+            <summary>
+            Empty constructor for mapping
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderItemDto.#ctor(StoreBLL.DTO.ProductDto,System.Int32)">
+            <summary>
+            Initialize <see cref="P:StoreBLL.DTO.OrderItemDto.Product"/>, <see cref="P:StoreBLL.DTO.OrderItemDto.Amount"/>
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderItemDto.Equals(System.Object)">
+            <summary>
+            This method using for comparison
+            </summary>
+            <param name="obj">The object to compare</param>
+            <returns>Returns boolean</returns>
+        </member>
+        <member name="M:StoreBLL.DTO.OrderItemDto.GetHashCode">
+            <summary>
+            This method calculate hash code
+            </summary>
+            <returns>Returns integer</returns>
+        </member>
+        <member name="T:StoreBLL.DTO.ProductDto">
+            <summary>
+            Represent data transform object - Product
+            </summary>
+        </member>
+        <member name="P:StoreBLL.DTO.ProductDto.ID">
+            <value>
+            The <c>ID</c> property represents id
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.ProductDto.ID"/> is a
+            that you use for id.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.ProductDto.Name">
+            <value>
+            The <c>Name</c> property represents name
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.ProductDto.Name"/> is a
+            that you use for name.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.ProductDto.Category">
+            <value>
+            The <c>Category</c> property represents category
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.ProductDto.Category"/> is a
+            that you use for category.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.ProductDto.Description">
+            <value>
+            The <c>Decsription</c> property represents description
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.ProductDto.Description"/> is a
+            that you use for description.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.ProductDto.Cost">
+            <value>
+            The <c>Cost</c> property represents cost
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.ProductDto.Cost"/> is a
+            that you use for cost.
+            </remarks>
+        </member>
+        <member name="M:StoreBLL.DTO.ProductDto.#ctor">
+            <summary>
+            Empty constructor for mapping
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.ProductDto.#ctor(System.String,System.String,System.String,System.Single)">
+            <summary>
+            Initialize <see cref="P:StoreBLL.DTO.ProductDto.Name"/>, <see cref="P:StoreBLL.DTO.ProductDto.Category"/>, <see cref="P:StoreBLL.DTO.ProductDto.Description"/>,
+            <see cref="P:StoreBLL.DTO.ProductDto.Cost"/>
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.ProductDto.#ctor(System.String,System.String,System.String,System.String,System.Single)">
+            <summary>
+            Initialize <see cref="P:StoreBLL.DTO.ProductDto.ID"/>, <see cref="P:StoreBLL.DTO.ProductDto.Name"/>, <see cref="P:StoreBLL.DTO.ProductDto.Category"/>, 
+            <see cref="P:StoreBLL.DTO.ProductDto.Description"/>, <see cref="P:StoreBLL.DTO.ProductDto.Cost"/>
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.ProductDto.Equals(System.Object)">
+            <summary>
+            This method using for comparison
+            </summary>
+            <param name="obj">The object to compare</param>
+            <returns>Returns boolean</returns>
+        </member>
+        <member name="M:StoreBLL.DTO.ProductDto.GetHashCode">
+            <summary>
+            This method calculate hash code
+            </summary>
+            <returns>Returns integer</returns>
+        </member>
+        <member name="T:StoreBLL.DTO.UserDto">
+            <summary>
+            Represent data transform object - User
+            </summary>
+        </member>
+        <member name="P:StoreBLL.DTO.UserDto.ID">
+            <value>
+            The <c>ID</c> property represents id
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.UserDto.ID"/> is a
+            that you use for id.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.UserDto.Login">
+            <value>
+            The <c>Login</c> property represents login
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.UserDto.Login"/> is a
+            that you use for login.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.UserDto.Password">
+            <value>
+            The <c>Password</c> property represents password
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.UserDto.Password"/> is a
+            that you use for password.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.UserDto.Name">
+            <value>
+            The <c>Name</c> property represents name
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.UserDto.Name"/> is a
+            that you use for name.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.UserDto.Surname">
+            <value>
+            The <c>Surname</c> property represents surname
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.UserDto.Surname"/> is a
+            that you use for surname.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.UserDto.PhoneNumber">
+            <value>
+            The <c>PhoneNumber</c> property represents phone number
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.UserDto.PhoneNumber"/> is a
+            that you use for phone number.
+            </remarks>
+        </member>
+        <member name="P:StoreBLL.DTO.UserDto.UserRole">
+            <value>
+            The <c>UserRole</c> property represents user's role
+            for this instance.
+            </value>
+            <remarks>
+            The <see cref="P:StoreBLL.DTO.UserDto.UserRole"/> is a
+            that you use for user's role.
+            </remarks>
+        </member>
+        <member name="M:StoreBLL.DTO.UserDto.#ctor">
+            <summary>
+            Empty constructor for mapping
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.UserDto.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialize <see cref="P:StoreBLL.DTO.UserDto.Login"/>, <see cref="P:StoreBLL.DTO.UserDto.Password"/>, <see cref="P:StoreBLL.DTO.UserDto.Name"/>,
+            <see cref="P:StoreBLL.DTO.UserDto.Surname"/>, <see cref="P:StoreBLL.DTO.UserDto.PhoneNumber"/>, <see cref="P:StoreBLL.DTO.UserDto.UserRole"/>
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.UserDto.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialize <see cref="P:StoreBLL.DTO.UserDto.ID"/>, <see cref="P:StoreBLL.DTO.UserDto.Login"/>, <see cref="P:StoreBLL.DTO.UserDto.Password"/>, <see cref="P:StoreBLL.DTO.UserDto.Name"/>,
+            <see cref="P:StoreBLL.DTO.UserDto.Surname"/>, <see cref="P:StoreBLL.DTO.UserDto.PhoneNumber"/>, <see cref="P:StoreBLL.DTO.UserDto.UserRole"/>
+            </summary>
+        </member>
+        <member name="M:StoreBLL.DTO.UserDto.Equals(System.Object)">
+            <summary>
+            This method using for comparison
+            </summary>
+            <param name="obj">The object to compare</param>
+            <returns>Returns boolean</returns>
+        </member>
+        <member name="M:StoreBLL.DTO.UserDto.GetHashCode">
+            <summary>
+            This method calculate hash code
+            </summary>
+            <returns>Returns integer</returns>
+        </member>
+        <member name="T:StoreBLL.Infrastructure.MapperConfigurator">
+            <summary>
+            This class decribes profile for automapper
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Infrastructure.MapperConfigurator.#ctor">
+            <summary>
+            Set up mapping between models
+            </summary>
+        </member>
+        <member name="T:StoreBLL.Roles.AuthorizedUser">
+            <summary>
+            This class describes access of user's role - Administrator
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Roles.AuthorizedUser.#ctor">
+            <summary>
+            Empty constructor
+            </summary>
+        </member>
+        <member name="P:StoreBLL.Roles.AuthorizedUser.OrderService">
+            <summary>
+            This property returns <see cref="F:StoreBLL.Roles.AuthorizedUser.orderService"/>
+            or initialize it, if <see cref="F:StoreBLL.Roles.AuthorizedUser.orderService"/> is <see langword="null"/>
+            </summary>
+        </member>
+        <member name="T:StoreBLL.Roles.Guest">
+            <summary>
+            This class describes access of user's role - Guest
+            </summary>
+        </member>
+        <member name="F:StoreBLL.Roles.Guest.productService">
+            <summary>
+            This field represents products' service
+            and can be inhereted
+            </summary>
+        </member>
+        <member name="F:StoreBLL.Roles.Guest.userService">
+            <summary>
+            This field represents users' service
+            and can be inhereted
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Roles.Guest.#ctor">
+            <summary>
+            Empty constructor
+            </summary>
+        </member>
+        <member name="P:StoreBLL.Roles.Guest.ProductService">
+            <summary>
+            This property returns <see cref="F:StoreBLL.Roles.Guest.productService"/>
+            or initialize it, if <see cref="F:StoreBLL.Roles.Guest.productService"/> is <see langword="null"/>
+            </summary>
+        </member>
+        <member name="P:StoreBLL.Roles.Guest.UserService">
+            <summary>
+            This property returns <see cref="F:StoreBLL.Roles.Guest.userService"/>
+            or initialize it, if <see cref="F:StoreBLL.Roles.Guest.userService"/> is <see langword="null"/>
+            </summary>
+        </member>
+        <member name="T:StoreBLL.Services.IOrderService">
+            <summary>
+            This class describes contract of 
+            service for orders
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.IOrderService.ListOfOrders">
+            <summary>
+            This method returns list of orders
+            </summary>
+            <returns>Collection of orders</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IOrderService.ReviewOrderHistory(System.String)">
+            <summary>
+            This method returns user's history of ordering
+            </summary>
+            <param name="login">User's login</param>
+            <returns>Collection of orders</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IOrderService.CreateNewOrder(StoreBLL.DTO.OrderDto)">
+            <summary>
+            This method create new order
+            </summary>
+            <param name="order">Will created order</param>
+            <returns>Success of the operation (boolean)</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IOrderService.CancelOrderByClient(System.String)">
+            <summary>
+            This method update order's status to "Canceled by user" in specified order
+            </summary>
+            <param name="orderID">Order's id</param>
+        </member>
+        <member name="M:StoreBLL.Services.IOrderService.ReceiveOrderByClient(System.String)">
+            <summary>
+            This method update order's status to "Received" in specified order
+            </summary>
+            <param name="orderID">Order's id</param>
+        </member>
+        <member name="M:StoreBLL.Services.IOrderService.UpdateStatusOrder(System.String,StoreBLL.DTO.OrderStatusDto)">
+            <summary>
+            This method update order's status in specified order
+            </summary>
+            <param name="orderID">Order's id</param>
+            <param name="status">Order's status</param>
+        </member>
+        <member name="T:StoreBLL.Services.IProductService">
+            <summary>
+            This class describes describe contract of 
+            service for products
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.IProductService.ListOfProducts">
+            <summary>
+            This method returns list of products
+            </summary>
+            <returns>Collection of products</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IProductService.SearchProductByName(System.String)">
+            <summary>
+            This method searches product with specified name
+            </summary>
+            <param name="name">Product's name</param>
+            <returns>Product with specified name</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IProductService.AddNewProduct(StoreBLL.DTO.ProductDto)">
+            <summary>
+            This method add new product
+            </summary>
+            <param name="product">Will added product</param>
+            <returns>Success of the operation (boolean)</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IProductService.UpdateProduct(StoreBLL.DTO.ProductDto)">
+            <summary>
+            This method update specified product
+            </summary>
+            <param name="product">Will updated product</param>
+            <returns>Success of the operation (boolean)</returns>
+        </member>
+        <member name="T:StoreBLL.Services.IUserService">
+            <summary>
+            This class describes describe contract of 
+            service for users
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.IUserService.ListOfUsers">
+            <summary>
+            This method returns list of users
+            </summary>
+            <returns>Collection of users</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IUserService.SearchUserByLogin(System.String)">
+            <summary>
+            This method searches user with specified login
+            </summary>
+            <param name="login">User's login</param>
+            <returns>User with specified login</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IUserService.RegisterUser(StoreBLL.DTO.UserDto)">
+            <summary>
+            This method register user
+            </summary>
+            <param name="user">Will registered user</param>
+            <returns>Success of the operation (boolean)</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IUserService.AuthorizeUser(System.String,System.String)">
+            <summary>
+            This method authorize user
+            </summary>
+            <param name="login">User's login</param>
+            <param name="password">User's password</param>
+            <returns>Authorized user</returns>
+        </member>
+        <member name="M:StoreBLL.Services.IUserService.UpdateUserProfile(StoreBLL.DTO.UserDto)">
+            <summary>
+            This method update specified user's profile
+            </summary>
+            <param name="user">Will updated user's profile</param>
+            <returns>Success of the operation (boolean)</returns>
+        </member>
+        <member name="T:StoreBLL.Services.OrderService">
+            <inheritdoc cref="T:StoreBLL.Services.IOrderService"/>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.#ctor">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.OrderService.unitOfWork"/> and <see cref="F:StoreBLL.Services.OrderService.mapper"/> to default
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.#ctor(StoreDAL.UoW.IUnitOfWork)">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.OrderService.unitOfWork"/> to specified object
+            and <see cref="F:StoreBLL.Services.OrderService.mapper"/> to default
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.#ctor(StoreDAL.UoW.IUnitOfWork,AutoMapper.IMapper)">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.OrderService.unitOfWork"/> and <see cref="F:StoreBLL.Services.OrderService.mapper"/> to specified objects
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.CancelOrderByClient(System.String)">
+            <inheritdoc cref="M:StoreBLL.Services.IOrderService.CancelOrderByClient(System.String)"/>
+             <exception cref="T:System.ArgumentException">
+             Thrown when status of <paramref name="orderID" /> is more or equal than 3
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.CreateNewOrder(StoreBLL.DTO.OrderDto)">
+            <inheritdoc cref="M:StoreBLL.Services.IOrderService.CreateNewOrder(StoreBLL.DTO.OrderDto)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="order" /> is <see langword="null"/>
+             </exception>
+             <exception cref="T:System.ArgumentException">
+             Thrown when <paramref name="order" /> is invalid
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.ListOfOrders">
+            <inheritdoc cref="M:StoreBLL.Services.IOrderService.ListOfOrders"/>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.ReceiveOrderByClient(System.String)">
+            <inheritdoc cref="M:StoreBLL.Services.IOrderService.ReceiveOrderByClient(System.String)"/>
+             <exception cref="T:System.ArgumentException">
+             Thrown when status of <paramref name="orderID" /> is more or equal than 3
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.ReviewOrderHistory(System.String)">
+            <inheritdoc cref="M:StoreBLL.Services.IOrderService.ReviewOrderHistory(System.String)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="login" /> is <see langword="null"/>
+             or empty
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.UpdateStatusOrder(System.String,StoreBLL.DTO.OrderStatusDto)">
+            <inheritdoc cref="M:StoreBLL.Services.IOrderService.UpdateStatusOrder(System.String,StoreBLL.DTO.OrderStatusDto)"/>
+             <exception cref="T:System.ArgumentException">
+             Thrown when status of <paramref name="orderID" /> is more or equal
+             than <paramref name="status"/>
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.OrderService.ValidateOrder(StoreBLL.DTO.OrderDto)">
+            <summary>
+            This method validate object type OrderDto
+            </summary>
+            <param name="order">Will validated user</param>
+            <returns>Success of validation</returns>
+        </member>
+        <member name="T:StoreBLL.Services.ProductService">
+            <inheritdoc cref="T:StoreBLL.Services.IProductService"/>
+        </member>
+        <member name="M:StoreBLL.Services.ProductService.#ctor">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.ProductService.unitOfWork"/> and <see cref="F:StoreBLL.Services.ProductService.mapper"/> to default
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.ProductService.#ctor(StoreDAL.UoW.IUnitOfWork)">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.ProductService.unitOfWork"/> to specified object
+            and <see cref="F:StoreBLL.Services.ProductService.mapper"/> to default
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.ProductService.#ctor(StoreDAL.UoW.IUnitOfWork,AutoMapper.IMapper)">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.ProductService.unitOfWork"/> and <see cref="F:StoreBLL.Services.ProductService.mapper"/> to specified objects
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.ProductService.AddNewProduct(StoreBLL.DTO.ProductDto)">
+            <inheritdoc cref="M:StoreBLL.Services.IProductService.AddNewProduct(StoreBLL.DTO.ProductDto)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="product" /> is <see langword="null"/>
+             </exception>
+             <exception cref="T:System.ArgumentException">
+             Thrown when <paramref name="product" /> is invalid
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.ProductService.ListOfProducts">
+            <inheritdoc cref="M:StoreBLL.Services.IProductService.ListOfProducts"/>
+        </member>
+        <member name="M:StoreBLL.Services.ProductService.SearchProductByName(System.String)">
+            <inheritdoc cref="M:StoreBLL.Services.IProductService.SearchProductByName(System.String)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="name" /> is <see langword="null"/>
+             or empty
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.ProductService.UpdateProduct(StoreBLL.DTO.ProductDto)">
+            <inheritdoc cref="M:StoreBLL.Services.IProductService.UpdateProduct(StoreBLL.DTO.ProductDto)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="product" /> is <see langword="null"/>
+             </exception>
+             <exception cref="T:System.ArgumentException">
+             Thrown when <paramref name="product" /> is invalid
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.ProductService.ValidateProduct(StoreBLL.DTO.ProductDto)">
+            <summary>
+            This method validate object type ProductDto
+            </summary>
+            <param name="product">Will validated product</param>
+            <returns>Success of validation</returns>
+        </member>
+        <member name="T:StoreBLL.Services.UserService">
+            <inheritdoc cref="T:StoreBLL.Services.IUserService"/>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.#ctor">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.UserService.unitOfWork"/> and <see cref="F:StoreBLL.Services.UserService.mapper"/> to default
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.#ctor(StoreDAL.UoW.IUnitOfWork)">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.UserService.unitOfWork"/> to specified object
+            and <see cref="F:StoreBLL.Services.UserService.mapper"/> to default
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.#ctor(StoreDAL.UoW.IUnitOfWork,AutoMapper.IMapper)">
+            <summary>
+            Initialize <see cref="F:StoreBLL.Services.UserService.unitOfWork"/> and <see cref="F:StoreBLL.Services.UserService.mapper"/> to specified objects
+            </summary>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.AuthorizeUser(System.String,System.String)">
+            <inheritdoc cref="M:StoreBLL.Services.IUserService.AuthorizeUser(System.String,System.String)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="password" /> is <see langword="null"/>
+             or empty
+             </exception>
+             <exception cref="T:System.ArgumentException">
+             Thrown when <paramref name="password" /> is wrong
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.ListOfUsers">
+            <inheritdoc cref="M:StoreBLL.Services.IUserService.ListOfUsers"/>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.RegisterUser(StoreBLL.DTO.UserDto)">
+            <inheritdoc cref="M:StoreBLL.Services.IUserService.RegisterUser(StoreBLL.DTO.UserDto)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="user" /> is <see langword="null"/>
+             </exception>
+             <exception cref="T:System.ArgumentException">
+             Thrown when <paramref name="user" /> is invalid
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.SearchUserByLogin(System.String)">
+            <inheritdoc cref="M:StoreBLL.Services.IUserService.SearchUserByLogin(System.String)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="login" /> is <see langword="null"/>
+             or empty
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.UpdateUserProfile(StoreBLL.DTO.UserDto)">
+            <inheritdoc cref="M:StoreBLL.Services.IUserService.UpdateUserProfile(StoreBLL.DTO.UserDto)"/>
+             <exception cref="T:System.ArgumentNullException">
+             Thrown when <paramref name="user" /> is <see langword="null"/>
+             </exception>
+             <exception cref="T:System.ArgumentException">
+             Thrown when <paramref name="user" /> is invalid
+             </exception>
+        </member>
+        <member name="M:StoreBLL.Services.UserService.ValidateUser(StoreBLL.DTO.UserDto)">
+            <summary>
+            This method validate object type UserDto
+            </summary>
+            <param name="user">Will validated order</param>
+            <returns>Success of validation</returns>
+        </member>
+    </members>
+</doc>

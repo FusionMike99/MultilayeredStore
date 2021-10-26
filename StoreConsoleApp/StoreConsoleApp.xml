@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StoreConsoleApp</name>
+    </assembly>
+    <members>
+        <member name="T:StoreConsoleApp.UI.AdminMenuControl">
+            <summary>
+            This class describes user's interface for administrator
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.AdminMenuControl.#ctor(StoreBLL.DTO.UserDto)">
+            <summary>
+            Initialize <see cref="F:StoreConsoleApp.UI.AdminMenuControl.admin"/> to default, <see cref="P:StoreConsoleApp.UI.RoleMenuControl.IsRunning"/>
+            to <see langword="true"/> and <see cref="P:StoreConsoleApp.UI.RoleMenuControl.User"/> to <see langword="null"/>
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.AdminMenuControl.ControlMenu">
+            <summary>
+            This method describes controlling menu of UI.
+            </summary>
+        </member>
+        <member name="T:StoreConsoleApp.UI.GuestMenuControl">
+            <summary>
+            This class describes user's interface for guest
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.GuestMenuControl.#ctor">
+            <summary>
+            Initialize <see cref="F:StoreConsoleApp.UI.GuestMenuControl.guest"/> to default, <see cref="P:StoreConsoleApp.UI.RoleMenuControl.IsRunning"/>
+            to <see langword="true"/> and <see cref="P:StoreConsoleApp.UI.RoleMenuControl.User"/> to <see langword="null"/>
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.GuestMenuControl.ControlMenu">
+            <summary>
+            This method describes controlling menu of UI.
+            </summary>
+        </member>
+        <member name="T:StoreConsoleApp.UI.MenuContext">
+            <summary>
+            This class describes context for UI
+            </summary>
+        </member>
+        <member name="P:StoreConsoleApp.UI.MenuContext.RoleMenu">
+            <summary>
+            This property represents UI of application
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.MenuContext.#ctor(StoreConsoleApp.UI.RoleMenuControl)">
+            <summary>
+            Initialized <see cref="P:StoreConsoleApp.UI.MenuContext.RoleMenu"/> with specified <paramref name="roleMenu"/>
+            </summary>
+            <param name="roleMenu">User's interface</param>
+        </member>
+        <member name="M:StoreConsoleApp.UI.MenuContext.SetStrategy(StoreConsoleApp.UI.RoleMenuControl)">
+            <summary>
+            This method change <see cref="P:StoreConsoleApp.UI.MenuContext.RoleMenu"/> with specified <paramref name="roleMenu"/>
+            </summary>
+            <param name="roleMenu">User's interface</param>
+        </member>
+        <member name="M:StoreConsoleApp.UI.MenuContext.Execute">
+            <summary>
+            This method launches algorithm of <see cref="P:StoreConsoleApp.UI.MenuContext.RoleMenu"/>
+            </summary>
+        </member>
+        <member name="T:StoreConsoleApp.UI.RegisteredUserMenuControl">
+            <summary>
+            This class describes user's interface for registered user
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.RegisteredUserMenuControl.#ctor(StoreBLL.DTO.UserDto)">
+            <summary>
+            Initialize <see cref="F:StoreConsoleApp.UI.RegisteredUserMenuControl.authorized"/> to default, <see cref="P:StoreConsoleApp.UI.RoleMenuControl.IsRunning"/>
+            to <see langword="true"/> and <see cref="P:StoreConsoleApp.UI.RoleMenuControl.User"/> to <see langword="null"/>
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.RegisteredUserMenuControl.ControlMenu">
+            <summary>
+            This method describes controlling menu of UI.
+            </summary>
+        </member>
+        <member name="T:StoreConsoleApp.UI.RoleMenuControl">
+            <summary>
+            This abstract class describes UI for user
+            </summary>
+        </member>
+        <member name="P:StoreConsoleApp.UI.RoleMenuControl.IsRunning">
+            <summary>
+            This property represents should the program work
+            </summary>
+        </member>
+        <member name="P:StoreConsoleApp.UI.RoleMenuControl.User">
+            <summary>
+            This property respresents object which type UserDto
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.RoleMenuControl.ControlMenu">
+            <summary>
+            This method describes controlling menu of UI.
+            </summary>
+            <remarks>
+            This method should be implemented in descendant classes.
+            </remarks>
+        </member>
+        <member name="T:StoreConsoleApp.UI.RoleMenuControl.Operation">
+            <summary>
+            This delegate describes operation
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.RoleMenuControl.DisplayMenu(System.String[])">
+            <summary>
+            This method displays menu in console window.
+            </summary>
+            <param name="functions">List of functions, 
+            which which are available to the user</param>
+        </member>
+        <member name="M:StoreConsoleApp.UI.RoleMenuControl.GetInput(System.String)">
+            <summary>
+            This method gets user's input
+            </summary>
+            <param name="message">Displayed message for user</param>
+            <returns>User's input</returns>
+        </member>
+        <member name="M:StoreConsoleApp.UI.RoleMenuControl.ExitFromApp">
+            <summary>
+            This method allows user to exit from application.
+            </summary>
+        </member>
+        <member name="M:StoreConsoleApp.UI.RoleMenuControl.DisplayUnknwonOperation">
+            <summary>
+            This method displays message for user, 
+            when the user enters unknown operation.
+            </summary>
+        </member>
+    </members>
+</doc>
