@@ -10,6 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Help Documentation\Documentation.chm" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Help Documentation\Documentation.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="SonarAnalyzer.CSharp" Version="8.30.0.37606">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -18,10 +28,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StoreBLL\StoreBLL.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Help Documentation\" />
   </ItemGroup>
 
 </Project>
